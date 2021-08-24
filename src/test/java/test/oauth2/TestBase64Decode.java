@@ -1,0 +1,16 @@
+package test.oauth2;
+
+import java.util.Base64;
+
+/**
+ *
+ * @author nn1211
+ */
+public class TestBase64Decode {
+    public static void main(String[] args) {
+        String tokenId = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjZlZjRiZDkwODU5MWY2OTdhOGE5Yjg5M2IwM2U2YTc3ZWIwNGU1MWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDg5MDc5NzI3OTkyLXRhczRtZmtvZ21mczhyNDFib29uYW9nODltZTBjYjFmLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA4OTA3OTcyNzk5Mi10YXM0bWZrb2dtZnM4cjQxYm9vbmFvZzg5bWUwY2IxZi5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExODEyNzc1MzY4NjMyNTg1Mjc5OCIsImVtYWlsIjoiZm9ydm5nYW1lMDAwMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Imd6RDNmUWZmcjlacmYyVHgtM05lVmciLCJuYW1lIjoiQW5oIE5ndXllbiIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQVRYQUp3Y2xBME9Bc0JVQ2xpcVBpUW9tOG90aHFTX3RyVEE3SXJnRzRSaz1zOTYtYyIsImdpdmVuX25hbWUiOiJBbmgiLCJmYW1pbHlfbmFtZSI6Ik5ndXllbiIsImxvY2FsZSI6InZpIiwiaWF0IjoxNjI5NTgzODE3LCJleHAiOjE2Mjk1ODc0MTd9.voIKSotX9M4Xf07NHwJfK01mWR8sqQifOsSLMBY8U36RatOyCoY1ND_RqO8Roxgay286edxBzeqUP89lK4iBtV78w9sSBaXH9mDY0ehTJSYZvvy330dgDw0drRVLnx_hZXgbYr30SwgQW0AUCbxVtLYxP3epCceXOQBK2wzxaQ6F3bkW-wV-1wEwNzWfVYquGtsvAy0YGU0lURQ_79iIBH9jwWLYEGIjBHEl2pPv6e0qsP4U4y14VGUGlxlTFnPusRBSGUrmnPo9N9KK9Ag4zF8tXB5r8D0O831MP060Qsm5QUT7gklWw53VjYvII57tXeeg43-s9y9zX7bXHrFoug";
+        String[] parts = tokenId.split("\\.");
+        System.out.println(parts.length);
+        System.out.println(new String(Base64.getDecoder().decode(parts[1])));
+    }
+}
